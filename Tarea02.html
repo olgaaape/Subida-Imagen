@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Subida y alojamiento de archivo en el servidor</h2>
+<!-- el atributo enctype del form debe valer "multipart/form-data" -->
+<!-- el atributo method del form debe valer "post" -->
+<form name="f1" enctype="multipart/form-data" action="subidaimagen.php" method="post">
+<label for="nombre">Indique su nombre</label>
+<input type="text" name="nombre"><br>
+<!-- Se fija en el cliente el tamaño máximo en bytes ( no es seguro ) el limite máximo se debe tener el archivo 
+  Se debe controlar también en el servidor (php.ini)
+-->
+<input type="hidden" name="MAX_FILE_SIZE" value="200000" /> <!--  100Kbytes -->
+
+<label>Elija el archivo a subir</label> <input name="archivo1" type="file" /> <br />
+
+<input type="hidden" name="MAX_FILE_SIZE" value="200000" /> <!--  100Kbytes -->
+
+<label>Elija el archivo a subir</label> <input name="archivo2" type="file" /> <br />
+<input type="submit" value="Subir archivo" />
+</form>
+</body>
+</html>
